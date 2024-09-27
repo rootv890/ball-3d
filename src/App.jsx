@@ -1,14 +1,16 @@
-import { OrbitControls, useGLTF } from '@react-three/drei';
+import { KeyboardControls, OrbitControls, useGLTF } from '@react-three/drei';
 import Experience from './Experience';
 import { Canvas } from '@react-three/fiber';
 import { Perf } from 'r3f-perf';
+import { keyControls } from './utils/keys';
 
 
 const App = () =>
 {
     return (
-        <>
-
+        <KeyboardControls
+            map={keyControls}
+        >
             <Canvas
                 camera={{
                     fov: 45,
@@ -27,7 +29,8 @@ const App = () =>
                 }} position='top-left' />
                 <OrbitControls makeDefault />
                 <Experience />
-            </Canvas></>
+            </Canvas>
+        </KeyboardControls>
     );
 };
 
