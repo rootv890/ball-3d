@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 html,
 body,
 #root {
@@ -6,4 +12,45 @@ body,
 	height: 100%;
 	width: 100vw;
 	overflow: hidden;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+
+
+/**
+ * Controls
+ */
+ .controls
+ {
+     position: absolute;
+     bottom: 10%;
+     left: 0;
+     width: 100%;
+ }
+
+ .controls .raw
+ {
+     display: flex;
+     justify-content: center;
+ }
+
+ .controls .key
+ {
+     width: 40px;
+     height: 40px;
+     margin: 4px;
+     border: 2px solid #ffffff;
+     background: #ffffff44;
+ }
+
+ .controls .key.large
+ {
+     width: 144px;
+ }
+
+ .controls .key.active
+ {
+     background: #ffffff99;
+ }
